@@ -1,5 +1,14 @@
+GOCMD=go
+GOBUILD=${GOCMD} build
+GOTEST=${GOCMD} test
+
+all: build test run
+
 build:
-	go build -o app
+	${GOBUILD} -o app
+
+test:
+	${GOTEST} -v
 
 run:
 	./app
